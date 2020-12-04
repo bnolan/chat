@@ -1,0 +1,146 @@
+@color: #36393f;
+
+.matrix-chat{
+  *{
+    box-sizing: border-box;
+  }
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 320px;
+  // font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  // font-size: 14px;
+  background: @color;
+  color: #ddd;
+  z-index: 999;
+  border-radius: 1px darken(#36393f, 30%);
+  overflow: hidden;
+
+  section{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  h3{
+    font-size: 1em;
+    font-weight: bold;
+    flex: 0;
+    margin: 4px 4px 8px 4px;
+    color: lighten(@color, 40%);
+   }
+
+  ul.rooms{
+    flex: 0;
+    margin: 0 0 0 24px;
+
+    li{
+      margin-bottom: 4px;
+      position: relative;
+      padding-bottom: 4px;
+      padding-left: 2px;
+      list-style-type: circle;
+    }
+
+    li.active{
+      list-style-type: disc;
+
+      b{
+        font-weight: bold;
+      }
+    }
+
+    button{
+      color: #aaa;
+      background: none;
+      border: none;
+      position: absolute;
+      top: 4px;
+      right: 10px;
+    }
+
+    b:hover{
+      text-decoration: underline;
+    }
+
+    b{
+      text-shadow: 1px 1px 1px black;
+      font-weight: normal;
+      cursor: pointer;
+    }
+
+    small{
+      opacity: 0.5;
+    }
+  }
+
+  .message{
+    position: relative;
+    left: 40px;
+    padding-bottom: 10px;
+    margin-right: 40px;
+
+    .avatar{
+      left: -36px;
+      width: 28px;
+      height: 28px;
+      background: #888;
+      border-radius: 32px;
+      position: absolute;
+      color: #333;
+      line-height: 28px;
+      text-align: center;
+    }
+
+    p{
+      margin: 0;
+      padding: 0;
+    }
+
+    .name{
+      color: white;
+      font-weight: bold;
+      padding-right: 10px;
+    }
+
+    .meta{
+      color: #666;
+      font-size: x-small;
+    }
+  }
+
+  .room{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .messages{
+      flex: 1 1 auto;
+      height: 0px;
+      // overflow-y: scroll;
+
+      .scroll{
+        height: 100%;
+        overflow-y: auto;
+      }
+    }
+
+    textarea{
+      background: lighten(@color, 60%);
+      color: @color;
+      width: 100%;
+      border-radius: 4px;
+      margin: 0;
+      font: inherit;
+      height: 48px;
+    }
+
+    .form{
+      margin: 0;
+      padding: 4px;
+    }
+  }
+}

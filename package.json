@@ -1,0 +1,28 @@
+{
+  "name": "cryptovoxels-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo index.tsx -- -p [ tsify ] -t lessify",
+    "build": "tsc",
+    "test": "tsc -p . --noEmit",
+    "bot": "ts-node bot.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "budo": "^11.6.1",
+    "tsify": "^4.0.1",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "@types/node": "^14.11.1",
+    "lessify": "^1.0.2",
+    "localenv": "^0.2.2",
+    "matrix-js-sdk": "^8.3.0",
+    "node-fetch": "^2.6.1",
+    "preact": "8.2.9",
+    "unistore": "3.4.1"
+  }
+}

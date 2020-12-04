@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "es6",
+    "module": "commonjs",
+    "jsx": "react",
+    "jsxFactory": "h",
+    "experimentalDecorators": false
+  }
+}
+
