@@ -142,6 +142,9 @@ function createActions(store) {
         },
         enterParcel(state, id) {
             return __awaiter(this, void 0, void 0, function* () {
+                if (!hs) {
+                    return {};
+                }
                 if (state.parcelRoom) {
                     yield store.action(actions.leave)(state.parcelRoom);
                 }
