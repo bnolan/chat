@@ -194,6 +194,10 @@ function createActions(store) {
     },
 
     async enterParcel (state, id) {
+      if (!hs) {
+        return {}
+      }
+
       if (state.parcelRoom) {
         await store.action(actions.leave)(state.parcelRoom)
       }
