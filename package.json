@@ -23,6 +23,6 @@
     "matrix-js-sdk": "^8.3.0",
     "node-fetch": "^2.6.1",
     "preact": "8.2.9",
-    "unistore": "3.4.1"
+    "unistore": "^3.4.1"
   }
 }

@@ -78,7 +78,7 @@ function createActions(store) {
 
       let m = await hs.sync(state.nextBatch, filter, state.nextBatch && TIMEOUT) // null, 0, 0)
 
-      console.log('sync', m)
+      // console.log('sync', m)
 
       // This is wrong - sync should call another action to get the latest state
       let rooms = Object.assign({}, store.getState().rooms)
@@ -409,16 +409,16 @@ export const Homeserver = () => {
   return hs
 }
 
-if (typeof window !== 'undefined' && window.location && window.location.port == '9966') {
-  let div = document.createElement('div')
-  div.className = 'matrix-chat'
-  document.body.appendChild(div)
+// if (typeof window !== 'undefined' && window.location && window.location.port == '9966') {
+//   let div = document.createElement('div')
+//   div.className = 'matrix-chat'
+//   document.body.appendChild(div)
 
-  // require('./style.less')
+//   // require('./style.less')
 
-  render(<Chat />, div)
+//   render(<Chat />, div)
 
-  setTimeout(() => {
-    login('bnolan', '')
-  }, 250)  
-}
+//   setTimeout(() => {
+//     login('bnolan', '')
+//   }, 250)  
+// }

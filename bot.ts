@@ -1,10 +1,12 @@
 import * as sdk from "matrix-js-sdk";
 import 'localenv'
 
+// @ts-ignore
 const fetch = require('node-fetch');
 
 const client = sdk.createClient("https://matrix.cryptovoxels.com");
 
+// @ts-ignore
 client.login("m.login.password", {"user": "bot", "password": process.env.BOT_PASSWORD}).then((response) => {
 
   createParcelRooms()

@@ -12,8 +12,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.encodeCoords = void 0;
 const sdk = require("matrix-js-sdk");
 require("localenv");
+// @ts-ignore
 const fetch = require('node-fetch');
 const client = sdk.createClient("https://matrix.cryptovoxels.com");
+// @ts-ignore
 client.login("m.login.password", { "user": "bot", "password": process.env.BOT_PASSWORD }).then((response) => {
     createParcelRooms();
     // createBurbRooms()
